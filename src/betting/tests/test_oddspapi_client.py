@@ -45,9 +45,7 @@ def test_get_odds_by_tournament(monkeypatch):
             return [{"fixtureId": "fixture-123"}]
 
     def mock_get(url, params, timeout):
-        assert url == (
-            "https://api.oddspapi.io/v4/odds-by-tournaments"
-        )
+        assert url == ("https://api.oddspapi.io/v4/odds-by-tournaments")
         assert params == {
             "tournamentIds": 31,
             "bookmaker": "bwin.de",
